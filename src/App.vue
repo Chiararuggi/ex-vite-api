@@ -17,13 +17,15 @@ export default {
   methods: {
     getBreweries() {
       axios.get(this.store.apiUrl).then((result) => {
-        this.store.breweries = result.data.results;
+        this.store.breweries = result.data;
       });
     },
   },
 };
 </script>
 
-<template></template>
+<template>
+  <AppCard v-for="brewery in store.breweries" :info="brewery" />
+</template>
 
 <style scoped></style>
