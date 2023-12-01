@@ -19,4 +19,10 @@ export default {
 </template>
 
 <style scoped>
+
+.card{
+    background-color: bisque;
+    width: 15rem;
+    text-align: center;
+}
 </style>
